@@ -17,6 +17,10 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+#colores al azar
+colors = ['blue','yellow','green','purple','black']
+snakecolor = colors[randrange(0,5)]
+fruitcolor = colors[randrange(0,5)]
 
 def change(x, y):
     """Change snake direction."""
@@ -43,17 +47,28 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10
-        food.y = randrange(-15, 15) * 10
+        #food.x = randrange(-15, 15) * 10
+        #food.y = randrange(-15, 15) * 10
+        #movimiento de un paso a la vez
+        food.x += randrange(-1,2) * 10
+        food.y += randrange(-1,2) * 10
+        if food.x > 420:
+            food.x = 420
+        if food.y > 420:
+            food.y = 420
+        if food.x < 0:
+            food.x = 0
+        if food.y < 0:
+            food.y = 0
     else:
         snake.pop(0)
 
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, snakecolor)
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, fruitcolor)
     update()
     ontimer(move, 100)
 

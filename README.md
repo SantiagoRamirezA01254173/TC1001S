@@ -35,6 +35,10 @@ colores, los cuales van brillando para crear un patron al azar.
 El jugador tiene que seguir este patron que se hace cada vez mas largo hasta que falle
 y se termine el juego.
 
+El codigo base venia con varias funciones. Grid() que dibuja los cuadrados al inicio.
+Flash() que se encarga de que cada cuadrado se prenda. Grow() que agrega mas longitud
+al patron. Y por ultimo Tap() que maneja cada click que hace le jugador. 
+
 En este codigo cada miembro del equipo hizo 3 cambios.
 
 * Santiago Ramírez Enríquez: Que se seleccione de un array de colores al azar al principio 
@@ -43,3 +47,6 @@ de cada ronda para que los cuadrados del juego tengan diferente color.
 patron del juego actualmente, similar a la actividad de la serpiente.
 * María Carelia Ibarra Vásquez: Que, usando la libreria playsound (version 1.2.2) se
 reproduzcan varios sonidos dependiendo del cuadro que se haya presionado.
+
+## VIDEO EXPLICANDO EL PROYECTO
+https://youtu.be/6FUuptgwcSU

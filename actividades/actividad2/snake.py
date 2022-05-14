@@ -18,8 +18,8 @@ snake = [vector(10, 0)]
 aim = vector(0, -10)
 
 #colores al azar
-colors = ['blue','yellow','green','purple','black']
-snakecolor = colors[randrange(0,5)]
+colors = ['blue','yellow','green','purple','black'] #Array con colores
+snakecolor = colors[randrange(0,5)] 
 fruitcolor = colors[randrange(0,5)]
 
 def change(x, y):
@@ -52,7 +52,7 @@ def move():
         #movimiento de un paso a la vez
         food.x += randrange(-1,2) * 10
         food.y += randrange(-1,2) * 10
-        if food.x > 420:
+        if food.x > 420: #Prevenir que se salga de la pantalla
             food.x = 420
         if food.y > 420:
             food.y = 420

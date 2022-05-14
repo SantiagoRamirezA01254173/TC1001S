@@ -45,7 +45,7 @@ def circle(start, end):
     down()
     begin_fill()
 
-    for count in range(360):
+    for count in range(360): #En 360 grados irse moviendo a la derecha
         forward(1)
         right(1)
 
@@ -60,9 +60,9 @@ def rectangle(start, end):
     begin_fill()
 
     for count in range(2):
-        forward(end.x - start.x)
+        forward(end.x - start.x) #Linea horizontal
         left(90)
-        forward(end.y - start.y)
+        forward(end.y - start.y) #Linea vertical
         left(90)
 
     end_fill()
@@ -75,8 +75,8 @@ def triangle(start, end):
     down()
     begin_fill()
 
-    forward(end.x - start.x)
-    left(90 + 45)
+    forward(end.x - start.x) #Linea de x a x
+    left(90 + 45)            #cambiar de angulo
     forward(end.x - start.x)
     left(90)
     forward(end.x - start.x)
@@ -117,5 +117,5 @@ onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
-onkey(lambda: color('yellow'), 'y')
+onkey(lambda: color('yellow'), 'y') #Color nuevo cuando se presiona y
 done()

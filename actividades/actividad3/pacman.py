@@ -13,7 +13,7 @@ ghosts = [
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
     [vector(120, 160), vector (5, 0)],
-    [vector(120, -160), vector(0, -5)],
+    [vector(120, -160), vector(0, -5)], #Se agregaron 2 vectores del fantasma
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -74,7 +74,7 @@ def valid(point):
 
 def world():
     "Draw world using path."
-    bgcolor('green')
+    bgcolor('green') #Colores cambiados
     path.color('brown')
 
     for index in range(len(tiles)):

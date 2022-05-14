@@ -13,7 +13,7 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 220) / 25
+        speed.x = (x + 220) / 25 #Cambiada la velocidad de 200 a 220
         speed.y = (y + 220) / 25
 
 
